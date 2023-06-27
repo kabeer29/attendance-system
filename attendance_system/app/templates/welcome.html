@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome {{ student.name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome {{ student.name }}</h1>
+    </header>
+    <div class="container">
+        {% if attendance %}
+            <h2>Your Attendance</h2>
+            <table>
+               
+                <tbody>
+                    {{ attendance|safe }}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No attendance data available for {{ student.name }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+

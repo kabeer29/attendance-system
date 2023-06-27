@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teacher Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #f2f2f2;
+		}
+		.container {
+			padding: 16px;
+			background-color: white;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px grey;
+			max-width: 500px;
+			margin: auto;
+			margin-top: 50px;
+		}
+		input[type=text], input[type=password] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+		.btn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.btn:hover {
+			background-color: #3e8e41;
+		}
+		.btn-block {
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form action="#" method="POST">
+			<h1>Teacher Login</h1>
+			<div class="input-group">
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required>
+			</div>
+			<div class="input-group">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required>
+			</div>
+			<div class="input-group">
+				<button type="submit" class="btn">Login</button>
+			</div>
+		</form>
+		
+	</div>
+</body>
+</html>

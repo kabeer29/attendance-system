@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>General Login Page</title>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #f2f2f2;
+		}
+		.container {
+			padding: 16px;
+			background-color: white;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px grey;
+			max-width: 500px;
+			margin: auto;
+			margin-top: 50px;
+		}
+		.btn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.btn:hover {
+			background-color: #3e8e41;
+		}
+		.btn-block {
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>General Login Page</h1>
+		<p>Please select your account type:</p>
+		<button class="btn btn-block" onclick="location.href='/student_login'">Student</button>
+        <button class="btn btn-block" onclick="location.href='/teacher_login'">Teacher</button>
+
+	</div>
+</body>
+</html>

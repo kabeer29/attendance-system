@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Signup Page</title>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #f2f2f2;
+		}
+		.container {
+			padding: 16px;
+			background-color: white;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px grey;
+			max-width: 500px;
+			margin: auto;
+			margin-top: 50px;
+		}
+		input[type=text], input[type=file], input[type=password] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+		.error {
+			color: red;
+		}
+		.btn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.btn:hover {
+			background-color: #3e8e41;
+		}
+		.btn-block {
+			width: 100%;
+		}
+	</style>
+	<script>
+		function validateForm() {
+			var password = document.getElementById("password").value;
+			var confirm_password = document.getElementById("confirm_password").value;
+			var error_message = document.getElementById("error_message");
+			if (password != confirm_password) {
+				error_message.innerHTML = "Passwords do not match!";
+				return false;
+			} else {
+				error_message.innerHTML = "";
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Student Signup Page</h1>
+		<form method="post" action="/signup" enctype="multipart/form-data" onsubmit="return validateForm();">
+
+
+
+			<label for="username">Name:</label>
+			<input type="text" id="username" name="name" placeholder="Enter your name">
+
+			<label for="photo">Photo:</label>
+			<input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png">
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password">
+
+			<label for="confirm_password">Confirm Password:</label>
+			<input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password">
+			<span id="error_message" class="error"></span>
+
+			<button class="btn btn-block">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
